@@ -1,0 +1,1 @@
+"""Refrigeration telemetry bounded context."""
