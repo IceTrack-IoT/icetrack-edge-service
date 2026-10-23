@@ -1,0 +1,16 @@
+services:
+  edge-service:
+    build:
+      context: .
+    container_name: icetrack-edge-service
+    env_file:
+      - .env.docker
+    ports:
+      - "5000:5000"
+    volumes:
+      - icetrack_edge_data:/var/lib/icetrack-edge
+    restart: unless-stopped
+
+volumes:
+  icetrack_edge_data:
+    name: icetrack_edge_data
